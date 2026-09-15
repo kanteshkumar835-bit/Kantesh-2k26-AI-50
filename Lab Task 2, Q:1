@@ -1,0 +1,19 @@
+# Q1: Calculate Total Pay
+
+# Take input from user
+hours = float(input("Enter number of hours worked: "))
+rate = float(input("Enter hourly rate: "))
+
+# Calculate pay according to rules
+if hours <= 40:
+    # Rule 1: 40 hours or less
+    total_pay = hours * rate
+else:
+    # Rule 2: More than 40 hours
+    regular_pay = 40 * rate
+    overtime_hours = hours - 40
+    overtime_pay = overtime_hours * rate * 1.5
+    total_pay = regular_pay + overtime_pay
+
+# Display result
+print("Total Pay: $", total_pay)
